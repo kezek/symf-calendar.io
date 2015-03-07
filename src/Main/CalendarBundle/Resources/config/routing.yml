@@ -1,0 +1,8 @@
+main_calendar_homepage:
+    path:     /
+    defaults: { _controller: MainCalendarBundle:Default:index }
+
+main_calendar_rest:
+    type: rest
+    prefix: /api
+    resource: "@MainCalendarBundle/Resources/config/api.yml"

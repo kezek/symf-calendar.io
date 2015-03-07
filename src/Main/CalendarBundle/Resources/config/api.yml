@@ -1,0 +1,5 @@
+calendar_api:
+    type: rest
+    prefix: "%api_version%"
+    resource: Main\CalendarBundle\Controller\Api\CalendarRestController
+    name_prefix: api_

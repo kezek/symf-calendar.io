@@ -1,0 +1,8 @@
+{
+  "name": "main-calendar-bundle",
+  "dependencies": {
+    "jquery": "latest",
+    "moment": "latest",
+    "fullcalendar": "latest"
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calendar</title>
+        {% javascripts
+            "@jquery_js"
+            "@moment_js"
+            "@fullcalendar_js"
+            "@MainCalendarBundle/Resources/public/js/*"
+        %}
+        <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+        {% stylesheets
+            "@fullcalendar_css"
+            "@MainCalendarBundle/Resources/public/css/*"
+        %}
+        <link rel="stylesheet" href="{{ asset_url }}"/>
+        {% endstylesheets %}
+        <script>
+            //inject application urls in the DOM via global variables
+            var getEventsUrl = '{{ url("api_get_events") }}';
+            var postEventUrl = '{{ url("api_post_event") }}';
+            var putEventUrl = '{{ url("api_put_event") }}';
+            var deleteEventUrl = '{{ url("api_delete_event") }}';
+        </script>
+    </head>
+    <body>
+        <div id="calendar"></div>
+    </body>
+</html>
+
+
